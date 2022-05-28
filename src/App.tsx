@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
+import {
+  BrowserRouter, Route, Routes,
+} from 'react-router-dom';
+import themeConfig from './theme/ThemeConfig';
+import Home from './pages/Home';
+import SketchDisplay from './pages/SketchDisplay';
 
 function App() {
+  const theme = createTheme(themeConfig);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline/>
+      <div className="app">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/sketch/:sketchId" element={<SketchDisplay />} />
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </ThemeProvider>
   );
 }
 
