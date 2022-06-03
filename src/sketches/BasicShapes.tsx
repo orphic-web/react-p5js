@@ -49,6 +49,11 @@ const BasicShapes = (sketchArgs:any) => (p:any) => {
     }
     counter += 1;
   };
+
+  // eslint-disable-next-line no-param-reassign
+  p.windowResized = () => {
+    p.resizeCanvas(p.windowHeight, p.windowWidth);
+  };
 };
 
 export default BasicShapes;

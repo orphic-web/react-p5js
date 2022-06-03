@@ -1,23 +1,40 @@
-import BasicShapes from './BasicShapes';
-import TestSketch from './TestSketch';
+import ExampleSketchConf from './ExampleSketch/ExampleSketchConf';
 
-const sketches = [
+type Sketches = {
+  id: string,
+  title: string,
+  sketch?: any,
+  sketchArgs?: any,
+  isResponsive?: boolean,
+  backgroundColor?: string,
+  showHeader?: boolean,
+  headerColor?: string,
+  minDimensions?: {
+    width: number,
+    height: number,
+  }
+  thumbnailUrl?: string,
+
+}
+
+const sketches : Sketches[] = [
   {
-    id: 'basic-shapes',
-    sketch: BasicShapes,
-    args: {
-      width: 800,
-      height: 800,
-    },
+    title: 'Example Sketch',
+    id: 'other-sketch',
   },
   {
-    id: 'test-sketch',
-    sketch: TestSketch,
-    args: {
-      width: 800,
-      height: 800,
-    },
+    title: 'Example Sketch',
+    id: 'other-sketch',
   },
+  {
+    title: 'Example Sketch',
+    id: 'other-sketch',
+  },
+  ExampleSketchConf,
+  ExampleSketchConf,
+  ExampleSketchConf,
+  ExampleSketchConf,
+  ExampleSketchConf,
 ];
 
 export default sketches;

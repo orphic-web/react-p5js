@@ -1,0 +1,16 @@
+.sketch-display {
+  padding: 20px 0;
+}
+
+.sktech-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvas-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

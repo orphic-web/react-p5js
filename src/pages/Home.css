@@ -1,0 +1,43 @@
+.home-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sketches-container {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.sketch-card {
+  width: 32%;
+  padding: 1%;
+}
+
+.card-body {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: var(--light);
+  padding: 10px;
+  text-align: center;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.card-img {
+  width: 100%;
+  padding-bottom: 66%;
+  background: var(--secondary);
+  background-size: cover;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+@media screen and (max-width: 749px) {
+  .sketch-card {
+    width: 48%;
+    padding: 2%;
+  }
+}
