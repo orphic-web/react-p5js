@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
-import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import {
-  BrowserRouter, Route, Routes,
+  createTheme, CssBaseline, ThemeProvider,
+} from '@mui/material';
+import {
+  Route, Routes,
 } from 'react-router-dom';
-import themeConfig from './theme/ThemeConfig';
-import Home from './pages/Home';
 import SketchDisplay from './pages/SketchDisplay';
+import Home from './pages/Home';
+import themeConfig from './theme/ThemeConfig';
+import Menu from './components/Menu';
 
 function App() {
   const theme = createTheme(themeConfig);
@@ -15,13 +18,12 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline/>
       <div className="app">
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/sketch/:sketchId" element={<SketchDisplay />} />
-            <Route path="*" element={<Home />} />
-          </Routes>
-        </BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sketch/:sketchId" element={<SketchDisplay />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+        <Menu />
       </div>
     </ThemeProvider>
   );

@@ -1,8 +1,8 @@
 .sketch-display {
-  padding: 20px 0;
+  min-height: 100vh;
 }
 
-.sktech-header {
+.sketch-header {
   padding: 20px;
   display: flex;
   align-items: center;
@@ -13,4 +13,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.canvas-container {
+  position: relative;
 }
