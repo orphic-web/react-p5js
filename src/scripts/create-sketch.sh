@@ -19,7 +19,7 @@ export default $1;" > src/sketches/$1/$1.ts
 echo "import $1 from './$1';
 
 export default {
-  id: '',
+  id: '$1',
   sketch: $1,
   sketchArgs: {
   },
