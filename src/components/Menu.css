@@ -1,0 +1,36 @@
+.menu-dial > button {
+  opacity: 1;
+}
+
+.menu-dial > button[aria-expanded="false"] {
+  opacity: 0.2;
+}
+
+.share-dialog {
+  padding: 10px 20px;
+}
+
+.share-dialog h1 {
+  font-size: 1.2em;
+  text-align: center;
+  margin: 10px 0 20px;
+}
+
+.share-dialog .share-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.share-dialog .share-url {
+  overflow-x: scroll;
+  width: 75%;
+  padding: 15px 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.share-dialog .share-icon {
+  text-align: center;
+  width: 15%;
+}

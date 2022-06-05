@@ -28,33 +28,35 @@ const SketchDisplay: React.FC = () => {
   }, []);
 
   useEffect(() => {
+    getCanvasSize();
     window.addEventListener('resize', getCanvasSize);
   }, []);
 
   const getCanvasSize = () => {
     if (canvasWrapperRef.current) {
-      setCanvasWrapperWidth(canvasWrapperRef.current.clientWidth);
-      setCanvasWrapperHeight(canvasWrapperRef.current.clientHeight);
+      setCanvasWrapperWidth(window.innerWidth);
+      setCanvasWrapperHeight(window.innerHeight);
     }
   };
 
   return (
     <>
       {sketchConf && <div className="sketch-display" style={{
+        padding: sketchConf.fullScreen ? '0' : '20px 0',
         backgroundColor: sketchConf.backgroundColor ? sketchConf.backgroundColor : 'inherit',
       }}>
-        <Container style={{ position: 'relative' }}>
+        <Container disableGutters={!!sketchConf.fullScreen} maxWidth={sketchConf.fullScreen ? false : 'lg'}>
           <>
-            {(sketchConf && sketchConf.showHeader)
-        && <div className="sktech-header" style={{
+            {(sketchConf.showHeader && !sketchConf.fullScreen)
+        && <div className="sketch-header" style={{
           color: sketchConf.headerColor ? sketchConf.headerColor : 'inherit',
         }}>
           <h1>{sketchConf?.title}</h1>
         </div>}
-            <div className="canvas-wrapper" style={{
-              overflow: sketchConf.isResponsive ? 'auto' : 'hidden',
-            }}
-            ref={canvasWrapperRef}>
+            <div className="canvas-wrapper">
+              <div className="canvas-container"
+                ref={canvasWrapperRef}>
+              </div>
             </div>
             {(sketchConf.minDimensions
           && canvasWrapperWidth

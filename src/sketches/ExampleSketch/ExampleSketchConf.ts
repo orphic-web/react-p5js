@@ -5,16 +5,15 @@ export default {
   sketch: ExampleSketch,
   sketchArgs: {
     width: 800,
-    height: 800,
+    height: 600,
   },
   isResponsive: false,
-  backgroundColor: '#FF0000',
+  backgroundColor: '#333333',
   showHeader: true,
   title: 'Example Sketch',
   headerColor: '#FFFFFF',
   minDimensions: {
     width: 800,
-    height: 800,
+    height: 600,
   },
-  thumbnailUrl: 'https://images.pexels.com/photos/12017866/pexels-photo-12017866.jpeg',
 };
