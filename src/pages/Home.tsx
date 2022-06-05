@@ -1,6 +1,7 @@
 import { Container, Tabs, Tab } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import Tags from '../models/Tags';
 import sketches from '../sketches/Sketches';
 import './Home.css';
@@ -27,7 +28,7 @@ const Home: React.FC = () => {
       <Container>
         <>
           <div className="home-header">
-            <h1>Home</h1>
+            <h1>Sketch Library</h1>
           </div>
           <Tabs
             value={tabValue}
@@ -53,6 +54,11 @@ const Home: React.FC = () => {
           </div>
         </>
       </Container>
+      <div className="footnote">
+        Made with
+        <FavoriteBorderOutlinedIcon fontSize="small" style={{ margin: '0 5px' }}/>
+        by <a href="https://orphic.ca" style={{ margin: '0 5px', color: 'var(--primary)', textDecoration: 'none' }}>Orphic</a>
+      </div>
     </div>
   );
 };

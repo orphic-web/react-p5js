@@ -39,6 +39,16 @@
   margin: 0px 20px 40px;
 }
 
+.footnote {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
 @media screen and (max-width: 749px) {
   .sketch-card {
     width: 50%;
