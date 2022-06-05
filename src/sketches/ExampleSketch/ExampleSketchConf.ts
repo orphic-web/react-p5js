@@ -10,7 +10,7 @@ const ExampleSketchConf : SketchModel = {
   },
   backgroundColor: '#333333',
   showHeader: true,
-  title: 'Example Sketch',
+  title: 'Flowing dots',
   headerColor: '#FFFFFF',
   minDimensions: {
     width: 800,
