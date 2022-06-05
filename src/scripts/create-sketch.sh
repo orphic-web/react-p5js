@@ -18,7 +18,7 @@ export default $1;" > src/sketches/$1/$1.ts
 # create sketch config file
 echo "import $1 from './$1';
 
-export default {
+const $1 : SketchModel = {
   id: '$1',
   sketch: $1,
   sketchArgs: {
@@ -26,4 +26,6 @@ export default {
   isResponsive: false,
   showHeader: true,
   title: '$1',
-};" > src/sketches/$1/$1Conf.ts
+};
+
+export default $1;" > src/sketches/$1/$1Conf.ts
