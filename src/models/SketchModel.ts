@@ -1,6 +1,9 @@
+import Tags from './Tags';
+
 type SketchModel = {
     id: string,
     title: string,
+    tags?: Tags[],
     sketch?: any,
     sketchArgs?: any,
     backgroundColor?: string,

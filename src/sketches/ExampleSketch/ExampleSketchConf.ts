@@ -1,13 +1,13 @@
+import SketchModel from '../../models/SketchModel';
 import ExampleSketch from './ExampleSketch';
 
-export default {
+const ExampleSketchConf : SketchModel = {
   id: 'example-sketch',
   sketch: ExampleSketch,
   sketchArgs: {
     width: 800,
     height: 600,
   },
-  isResponsive: false,
   backgroundColor: '#333333',
   showHeader: true,
   title: 'Example Sketch',
@@ -17,3 +17,5 @@ export default {
     height: 600,
   },
 };
+
+export default ExampleSketchConf;

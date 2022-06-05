@@ -35,6 +35,10 @@
   border-top-right-radius: 4px;
 }
 
+.sketches-tabs {
+  margin: 0px 20px 40px;
+}
+
 @media screen and (max-width: 749px) {
   .sketch-card {
     width: 50%;
