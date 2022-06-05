@@ -40,8 +40,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "create-sketch": "bash src/scripts/create-sketch.sh",
-    "deploy": "firebase deploy --only hosting:react-p5-55d7e",
-    "deploy:boilerplate": "firebase deploy --only hosting:boilerplate-142f9"
+    "deploy": "firebase deploy --only hosting:boilerplate-142f9"
   },
   "eslintConfig": {
     "extends": [
