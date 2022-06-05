@@ -5,20 +5,22 @@
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.8.2",
     "@mui/material": "^5.8.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.1",
     "@types/node": "^16.11.36",
+    "@types/p5": "^1.4.1",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
     "@types/react-router-dom": "^5.3.3",
-    "@types/p5": "^1.4.1",
     "eslint": "^8.16.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-import-resolver-typescript": "^2.7.1",
     "eslint-plugin-import": "^2.26.0",
+    "firebase": "^9.8.2",
     "p5": "^1.4.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -37,7 +39,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "create-sketch": "bash src/scripts/create-sketch.sh"
+    "create-sketch": "bash src/scripts/create-sketch.sh",
+    "deploy": "firebase deploy --only hosting:react-p5-55d7e",
+    "deploy:boilerplate": "firebase deploy --only hosting:boilerplate-142f9"
   },
   "eslintConfig": {
     "extends": [
