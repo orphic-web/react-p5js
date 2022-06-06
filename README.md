@@ -4,15 +4,19 @@ Basic p5.js sketch library implementation in react. This boilerplate creates a s
 
 This was a fun experiment, feel free to use it as is or hack it to your heart's content!
 
+## Preview
+
+![Project preview](https://firebasestorage.googleapis.com/v0/b/react-p5-55d7e.appspot.com/o/project-screenshot.png?alt=media&token=db1e03c2-77ec-4012-93fb-64748951fed6)
+
 ## Usage
 
 Clone this repository and start creating sketches by runing the command `npm run create-sketch mysketchname`. This will create a sketch folder as well as the main sketch file and sketch configuration file (see below for configuration details).
 
 ## Sketch configuration
 
-THe sketch model has the following parameters that control the sketch itself and the sketch display page:
+The sketch model has the following parameters that control the sketch itself and the sketch display page:
 
-```
+```typescript
 {
     id: string, // sketch id, generated from the command line argument passed
     title: string, // sketch display title
